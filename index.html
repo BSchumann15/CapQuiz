@@ -13,16 +13,46 @@
     <header>
         <div class="container">
             <div class="row">
-              <div class="col-4">
+              <div class="col-12 col-md-6">
                 <button id="View-Scores" type="button" class="btn btn-outline-success">High Scores</button>
               </div>
-              <div class="col-4">
-            
-              </div>
-              <div class="col-4">
-                <div class="d-flex justify-content-between-right">120 Secs</div>
+              <div class="col-12 col-md-6 Clock">
+                <div class="Time">120 Secs</div>
               </div>
             </div>
           </div> 
     </header>
+
+
+    <main>
+<section id="intro">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 Start">
+      <h1 class="d-flex justify-content-center">The Capitals of the World Quiz!!</h1>
+      <p class="d-flex justify-content-center">Try to answer the following questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+      <button id="start" type="button" class="btn btn-secondary">Start Quiz</button></p>
+    </div>
+  </div>
+</section>
+
+<section id="questions">
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <h2 id="question">Im a question</h2>
+    <ul class="px-0 py-0 nobullets">
+       <li class="mb-3"><button id="answer1" value="0" type="button"
+        class="btn btn-outline-dark ansBtn">Answer1</button></li>
+       <li class="mb-3"><button id="answer2" value="1" type="button"
+        class="btn btn-outline-dark ansBtn">Answer2</button></li>
+       <li class="mb-3"><button id="answer3" value="2" type="button"
+        class="btn btn-outline-dark ansBtn">Answer3</button></li>
+       <li class="mb-3"><button id="answer4" value="3" type="button"
+        class="btn btn-outline-dark ansBtn">Answer4</button></li>
+    </ul>
+  </div>
+</div>
+</section>
+    </main>
 </body>
