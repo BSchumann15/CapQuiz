@@ -52,9 +52,18 @@ const questions = [
 ]
 
 
-function setTime({
+function setTime(){
     let timerInterval = setInterval(function(){
         secondsLeft--;
         TimeEl.textContent = "Time:${secondsLeft}s";
-    })
-})
+
+        if (secondsLeft === 0 || questioncount === questions.length){
+            clearInterval(timerInterval);
+            questionsEl.style.display = "none";
+            FinalsEl.style.display ="block";
+            ScoreEl.textContent = secondsLeft;
+        }
+    }, 1000);
+}
+
+
