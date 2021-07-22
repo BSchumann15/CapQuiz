@@ -140,4 +140,17 @@ function addScore(event){
 }
 
 
+function storeScores(){
+    localStorage.setItem("scoreList", JSON.stringify(scorelist));
+}
+
+function displayScores(){
+    let storedScoreList = JSON.parse(localStorage.getItem("scoreList"));
+
+    if (scorelist !== null){
+        scorelist = storedScoreList;
+    }
+}
+
+
 
