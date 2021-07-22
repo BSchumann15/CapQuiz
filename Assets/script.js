@@ -66,4 +66,11 @@ function setTime(){
     }, 1000);
 }
 
+function startQuiz(){
+introEl.style.display = "none";
+questionsEl.style.display = "block";
+questioncount = 0;
 
+setTime();
+setQuestion(questioncount);
+}
