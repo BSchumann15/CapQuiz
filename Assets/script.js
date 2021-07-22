@@ -111,3 +111,33 @@ function checkAnswer(event){
     setQuestion(questioncount);
 }
 
+
+function addScore(event){
+    event.preventDefault();
+    FinalsEl.style.display = "none";
+    highscoresEl.style.display = "block";
+    let init = initialsinput.value.toUpperCase();
+    scorelist.push({initials: init, score: secondsLeft});
+    scorelist = scorelist.sort((a,b) =>{
+        if(a.score < b.score){
+            return 1;
+        } else {
+            return -1;
+        }
+    });
+
+
+    scoreslistEl.innerHTML="";
+    for (let i = 0; i< scorelist.length; i++){
+        let li = document.createElement("li");
+        li.textContent = `${scoreList[i].initials}: ${scoreList[i].score}`;
+        scoreListEl.append(li);
+    }
+
+    storeScores();
+    displayScores();
+
+}
+
+
+
