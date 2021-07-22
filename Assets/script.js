@@ -27,3 +27,34 @@ const submitScrBtn = document.querySelector("#submit-score");
 const goBackBtn = document.querySelector("#goback");
 const clearScrBtn = document.querySelector("#clearscores");
 const viewScrBtn = document.querySelector("#view-scores");
+
+const questions = [
+    {
+        question: "What is the capital of the Czech Republic?",
+        answers: ["1. Vienna", "2. Prague", "3. Manchester", "4. Kyiv"],
+        correctAnswer: "2"
+    },
+    {
+        question:"What is the capital of Spain?",
+        answers: ["1. Barcelona", "2. Moscow", "3. Madrid", "4. Hamsburg"],
+        correctAnswer:"3"
+    },
+    {
+        question:"What is the capital of Estonia?",
+        answers: ["1. Warsaw", "2. Tallinn", "3. Bucharest", "None of the above"],
+        correctAnswer:"3"
+    },
+    {
+        question:"What is the capital of Latvia?",
+        answers: ["1. Riga", "2. Vilnius", "3. Bucharest", "4. Nur-Sultan"],
+        correctAnswer:"1"
+    },
+]
+
+
+function setTime({
+    let timerInterval = setInterval(function(){
+        secondsLeft--;
+        TimeEl.textContent = "Time:${secondsLeft}s";
+    })
+})
