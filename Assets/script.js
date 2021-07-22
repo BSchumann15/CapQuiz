@@ -85,3 +85,29 @@ function setQuestion(){
     }
 }
 
+function checkAnswer(event){
+    event.preventDefault();
+    yaynayEl.style.display = "block";
+    let p = document.createElement("p");
+    yaynayEl.appendChild(p);
+
+
+    setTimeout(function () {
+        p.style.display = "none";
+    }, 1000);
+
+
+    if (questions[questioncount].correctAnswer === event.target.value){
+        p.textContent = "correctomondo";
+    } else if (question[questioncount].correctAnswer !== event.target.value){
+        secondsLeft = secondsLeft -10;
+        p.textContent = "LOL", "Nope";
+    }
+
+    if (questioncount < question.length){
+        questioncount++;
+    }
+    
+    setQuestion(questioncount);
+}
+
